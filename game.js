@@ -15,7 +15,7 @@ function animate() {
     window.requestAnimationFrame(animate);
 
     handleControls();
-
+    
     ctx.fillStyle = "black";
     ctx.fillRect(0,0, canvasWidth, canvasHeight);
 
