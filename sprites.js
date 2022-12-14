@@ -69,7 +69,7 @@ const player2 = new Fighter({
         y: 500,
         x: 20
     },
-    velocity:{
+    velocity: {
         x: 0,
         y: 0
     },
