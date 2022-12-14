@@ -28,8 +28,7 @@ class Fighter extends Sprite{
         this.velocity = velocity;
         this.width = dimensions.width;
         this.height = dimensions.height;
-        this.lastKeyPressed  
-
+        this.lastKeyPressed;  
     }
     
     update(){
@@ -64,6 +63,7 @@ const player = new Fighter({
         height: 150
     }
 })
+
 const player2 = new Fighter({
     position: {
         y: 500,

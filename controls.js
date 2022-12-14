@@ -14,7 +14,6 @@ const keys = {
     
 }
 
-
 window.addEventListener("keydown", e => {
     let key = e.key;
 
@@ -39,6 +38,7 @@ window.addEventListener("keydown", e => {
             break;
     }
 })
+
 window.addEventListener("keyup", e => {
     let key = e.key;
 
@@ -62,7 +62,6 @@ window.addEventListener("keyup", e => {
 function handleControls() {
 
     movement();
-
     function movement() {
         player.velocity.x = 0;
 
