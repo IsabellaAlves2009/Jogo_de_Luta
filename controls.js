@@ -6,10 +6,12 @@ const keys = {
         pressed: false
     },
     w: {
-        pressed: false
+        pressed: false,
+        hold: false
     },
     space: {
-        pressed: false
+        pressed: false,
+        hold: false
     }
     
 }
@@ -55,24 +57,30 @@ window.addEventListener("keyup", e => {
         case "w": 
             keys.w.pressed = false
             break;
+        case "z":
+        case " ":
+            keys.space.pressed = false;
+            keys.space.hold = false;
+            break;
       
     }
 })
 
 function handleControls() {
-
     movement();
+
     function movement() {
         player.velocity.x = 0;
 
-        if (keys.a.pressed && ["a", "ArrowUp"].includes(player.lastKeyPressed)) {
+        if (keys.a.pressed && ["a", "ArrowLeft"].includes(player.lastKeyPressed)) {
             player.velocity.x = -1.5 * 3.4
         }
         if (keys.d.pressed && ["d", "ArrowRight"].includes(player.lastKeyPressed)) {
             player.velocity.x = 1.5 * 3.4;
         }
-        if (keys.w.pressed) {
-            player.velocity.y = -7;
+        if (keys.w.pressed && !keys.w.hold) {
+           player.jump();
+           keys.w.hold = true;
         }
     }
 }

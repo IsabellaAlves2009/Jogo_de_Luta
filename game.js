@@ -17,7 +17,7 @@ function animate() {
     handleControls();
 
     ctx.fillStyle = "black";
-    ctx.fillRect(0,0, canvasWidth, canvasHeight);
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
     player.update();
 
